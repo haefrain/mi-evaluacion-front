@@ -3,7 +3,7 @@
     <v-row>
       <v-col align="center">
         <h2>¡Felicidades!</h2>
-        <h3>Has finalizado con exito la evaluacion de clima, cultura y cambio.</h3>
+        <h3>Has finalizado con éxito la evaluación de clima, cultura y cambio.</h3>
       </v-col>
     </v-row>
     <v-row>

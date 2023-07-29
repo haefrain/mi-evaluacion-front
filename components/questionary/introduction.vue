@@ -11,7 +11,7 @@
     <v-row>
       <v-col>
         <span>
-          Bienvenid@ a la aplicación de la Encuesta de Clima, Cultura y Cambio AGN 2021, lo invitamos a darnos su opinión frente a diferentes aspectos en la entidad.
+          Bienvenido a la aplicación de la Encuesta de Clima, Cultura y Cambio AGN 2023, lo invitamos a darnos su opinión frente a diferentes aspectos en la entidad.
           <br />
           <br />
           Recuerde que sus respuestas serán anónimas y que no existen respuestas correctas o incorrectas, por lo que conteste de forma rápida y sincera, sin dejarse influenciar por la opinión de otros.
