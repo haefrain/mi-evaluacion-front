@@ -18,10 +18,7 @@ export const useDashboardStore = defineStore("DashboardStore", {
             return result
         },
         async exportParticipants() {
-            const result = await post('export/participants', null, true, {'Content-Type': 'application/xlsx'})
-            console.log(result)
-
-            return result
+            return await post('export/participants', null, true, {'Content-Type': 'application/xlsx'})
         },
     },
 

@@ -1,6 +1,6 @@
 import { getCookie } from './cookies'
 
-const API_PATH = 'http://localhost:8000'
+const API_PATH = 'https://api.mi-evaluacion.com'
 const API_PATH_COMPLEMENT = `${API_PATH}/api`
 
 const getToken = async () =>
