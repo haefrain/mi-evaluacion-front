@@ -2,16 +2,19 @@
   <v-layout>
     <v-navigation-drawer expanded>
       <v-list>
-        <v-list-item
-            title="Mi Evaluación"
-        ></v-list-item>
+        <v-list-item>
+          <v-img
+              :width="300"
+              src="./logo_agn.png"
+          ></v-img>
+        </v-list-item>
       </v-list>
 
       <v-divider></v-divider>
 
-      <v-list density="compact" nav>
-        <v-list-item prepend-icon="mdi-home" title="Inicio" value="inicio"></v-list-item>
-        <v-list-item prepend-icon="mdi-list-box-outline" title="Mis Evaluaciones" value="misEvaluaciones" href="/questionary"></v-list-item>
+      <v-list nav>
+        <v-list-item prepend-icon="mdi-home" title="Inicio" value="inicio" href="/" v-if="!isUser"></v-list-item>
+        <v-list-item prepend-icon="mdi-list-box-outline" title="Mis Evaluaciones" value="misEvaluaciones" href="/questionary" v-if="isUser"></v-list-item>
         <v-list-item prepend-icon="mdi-logout" title="Cerrar sesión" value="Cerrar sesión" @click="logout"></v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -35,6 +38,11 @@ export default {
       if (response.success) {
         navigateTo('/login')
       }
+    }
+  },
+  computed: {
+    isUser() {
+      return this.authStore.authUser.role.name === 'User'
     }
   }
 }

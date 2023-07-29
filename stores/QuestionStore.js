@@ -12,8 +12,8 @@ export const useQuestionStore = defineStore("QuestionStore", {
     },
 
     actions: {
-        async index() {
-            const result = await get('questions')
+        async index(page = 1) {
+            const result = await get('questions', {page})
             if (result.success) {
                 this.questions = result.data.data
             }
