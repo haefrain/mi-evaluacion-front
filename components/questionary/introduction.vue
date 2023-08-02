@@ -11,10 +11,10 @@
     <v-row>
       <v-col>
         <span>
-          Bienvenido a la aplicación de la Encuesta de Clima, Cultura y Cambio AGN 2023, lo invitamos a darnos su opinión frente a diferentes aspectos en la entidad.
+          Debemos colocar Bienvend@ a la aplicación de la Encuesta de Clima, Cultura y Cambio AGN 2023, te invitamos a darnos tu opinión frente a diferentes aspectos de la Entidad.
           <br />
           <br />
-          Recuerde que sus respuestas serán anónimas y que no existen respuestas correctas o incorrectas, por lo que conteste de forma rápida y sincera, sin dejarse influenciar por la opinión de otros.
+          Recuerda que tus respuestas serán anónimas y que no existen respuestas correctas o incorrectas, por lo que contesta de forma rápida y sincera, sin dejarte influenciar por la opinión de otras personas.
         </span>
       </v-col>
     </v-row>
