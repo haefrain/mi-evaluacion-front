@@ -206,8 +206,17 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
-          <v-switch v-model="formData.with_people_charge" label="¿Tiene personas a cargo?" inset color="info"></v-switch>
+        <v-col cols="12" md="6">
+          <v-select
+              v-model="formData.with_people_charge"
+              label="¿Tienes personas a cargo en el AGN?"
+              @change="v$.with_people_charge.$touch"
+              item-value="id"
+              item-title="name"
+              :items="withPeopleCharges"
+              :error="v$.with_people_charge.$error"
+              :error-messages="v$.with_people_charge.$errors[0]?.$message ?? ''"
+          ></v-select>
         </v-col>
       </v-row>
       <v-row>
@@ -243,6 +252,7 @@ const rules = computed(() => {
     age: { required: helpers.withMessage('El campo es requerido.', required) },
     seniority: { required: helpers.withMessage('El campo es requerido.', required) },
     education_level: { required: helpers.withMessage('El campo es requerido.', required) },
+    with_people_charge: { required: helpers.withMessage('El campo es requerido.', required) },
   };
 });
 
@@ -294,6 +304,7 @@ const message = ref(null)
 const genders = ref([
   {id: 'male', name: 'Hombre'},
   {id: 'female', name: 'Mujer'},
+  {id: 'other', name: 'Otro'},
   {id: 'ns/nr', name: 'No sabe / No responde'},
 ])
 
@@ -321,6 +332,12 @@ const education_levels = ref([
   {id: 'Profesional', name: 'Profesional'},
   {id: 'Post-grado', name: 'Post-grado'},
 ])
+
+const withPeopleCharges = ref([
+  {id: true, name: 'Si'},
+  {id: false, name: 'No'},
+])
+
 if (formData.age === null && formData.seniority === null && formData.education_level === null) {
   evaluationStore.notValidDemographic()
 } else {

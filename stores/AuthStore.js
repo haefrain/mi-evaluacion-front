@@ -71,8 +71,6 @@ export const useAuthStore = defineStore("AuthStore", {
             userStore.$state.user = null
             this.csrfToken = null
 
-            getActivePinia()._s.forEach(store => store.$reset());
-
             return result
         }
     },

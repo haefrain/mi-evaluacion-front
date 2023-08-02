@@ -34,10 +34,8 @@ export default {
   },
   methods: {
     async logout() {
-      const response = await this.authStore.logout_api();
-      if (response.success) {
-        navigateTo('/login')
-      }
+      await this.authStore.logout_api()
+      navigateTo('/login')
     }
   },
   computed: {
